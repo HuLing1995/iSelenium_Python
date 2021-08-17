@@ -33,7 +33,7 @@ class ISelenium(unittest.TestCase):
 
         chrome_options = Options()
         if browser is not None and browser.lower() == 'no_gui':
-            print('使用无界面方式运行', config.get('driver', 'chrome_driver'))
+            print('使用无界面方式运行', get('driver', 'chrome_driver'))
             chrome_options.add_argument("--headless")
             self.driver = webdriver.Chrome(executable_path=config.get('driver', 'chrome_driver'),
                                            options=chrome_options)
